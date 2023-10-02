@@ -9,15 +9,18 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/black">
-    <TextView
+
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/speedTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="70sp"/>
-    <TextView
+
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/kmh_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/km_h"
         android:textSize="30sp"/>
+
 </LinearLayout>
