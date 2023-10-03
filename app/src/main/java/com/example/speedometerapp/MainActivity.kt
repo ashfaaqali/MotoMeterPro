@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         locationListener = LocationListener { location -> // Calculate speed in meters per second
             if (location.hasSpeed()) {
                 val speed = location.speed * 3.6 // Convert to km/h
-                binding.speedTextView.text = "%.1f".format(speed)
+                binding.speedTextView.text = "%.0f".format(speed)
             } else {
                 Log.d("Speed", "Speed data not available")
             }
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         locationManager.requestLocationUpdates(
             LocationManager.GPS_PROVIDER,
-            100, // Update every 1 second
+            10, // Update every 1 second
             0f,   // Update whenever there's a location change
             locationListener
         )
