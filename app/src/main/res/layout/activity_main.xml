@@ -23,4 +23,20 @@
         android:text="@string/km_h"
         android:textSize="30sp"/>
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/error_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textSize="70sp"
+        android:src="@drawable/baseline_error_24"
+        app:tint="#F44336"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This app requires precise location access for accurate speed calculations. Please grant precise location access."
+        android:textSize="20sp"
+        android:textColor="#F44336"/>
+
 </LinearLayout>
