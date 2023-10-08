@@ -8,12 +8,23 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/black">
+    android:background="#497fbb">
+
+    <LinearLayout
+        android:id="@+id/speed_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/speedTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textStyle="bold"
+        android:textColor="#101c2b"
         android:textSize="70sp"/>
 
     <com.google.android.material.textview.MaterialTextView
@@ -21,22 +32,79 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/km_h"
+        android:textColor="#101c2b"
         android:textSize="30sp"/>
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/error_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:textSize="70sp"
-        android:src="@drawable/baseline_error_24"
-        app:tint="#F44336"/>
+    </LinearLayout>
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/error_text"
+    <LinearLayout
+        android:id="@+id/permission_alert_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/alert"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:lineSpacingMultiplier="1.08"
+            android:textColor="#ffddb9"
+            android:layout_marginTop="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/give_permission_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Give Permission"
+            app:backgroundTint="#101c2b"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/error_layout"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This app requires precise location access for accurate speed calculations. Please grant precise location access."
-        android:textSize="20sp"
-        android:textColor="#F44336"/>
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#795831"
+        android:background="@drawable/corners"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_error_24"
+            app:tint="#ffddb9"
+            android:layout_gravity="center_horizontal"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alert"
+            android:textSize="17sp"
+            android:lineSpacingMultiplier="1.08"
+            android:textColor="#ffddb9"
+            android:layout_marginTop="8dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/settings_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open_location_settings"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="#ffddb9"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
 
 </LinearLayout>
