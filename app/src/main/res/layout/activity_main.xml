@@ -1,110 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
     android:gravity="center"
-    android:background="#497fbb">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/speed_layout"
+        android:id="@+id/ask_permission_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:visibility="gone">
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/speedTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/_0"
-        android:textStyle="bold"
-        android:textColor="#101c2b"
-        android:textSize="70sp"/>
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/kmh_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/km_h"
-        android:textColor="#101c2b"
-        android:textSize="30sp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/permission_alert_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:orientation="vertical">
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:layout_marginTop="8dp"
+            android:lineSpacingMultiplier="1.08"
             android:text="@string/alert"
             android:textAlignment="center"
-            android:textSize="17sp"
-            android:lineSpacingMultiplier="1.08"
-            android:textColor="#ffddb9"
-            android:layout_marginTop="8dp"/>
+            android:textColor="#000000"
+            android:textSize="17sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/give_permission_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Give Permission"
-            app:backgroundTint="#101c2b"
-            android:textColor="@color/white"/>
-
+            android:textColor="@color/white"
+            app:backgroundTint="#497fbb" />
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/error_layout"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="50dp"
-        android:backgroundTint="#795831"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/corners"
+        android:backgroundTint="#795831"
+        android:orientation="vertical"
         android:padding="15dp"
-        android:orientation="vertical">
+        android:visibility="gone">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:src="@drawable/baseline_error_24"
-            app:tint="#ffddb9"
-            android:layout_gravity="center_horizontal"/>
+            app:tint="#ffddb9" />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/alert"
-            android:textSize="17sp"
+            android:layout_marginTop="8dp"
             android:lineSpacingMultiplier="1.08"
+            android:text="@string/alert"
             android:textColor="#ffddb9"
-            android:layout_marginTop="8dp"/>
+            android:textSize="17sp" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/settings_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="@string/open_location_settings"
-            android:textStyle="bold"
-            android:textSize="17sp"
             android:textColor="#ffddb9"
-            android:layout_marginTop="8dp"/>
-
+            android:textSize="17sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </LinearLayout>
