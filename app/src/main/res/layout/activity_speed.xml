@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".Speed"
+    tools:context="com.ashfaq.motometerpro.Speed"
     android:background="@drawable/speed_screen_gradient">
 
     <com.google.android.material.textview.MaterialTextView

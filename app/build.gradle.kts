@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.speedometerapp"
+    namespace = "com.ashfaq.motometerpro"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.speedometerapp"
+        applicationId = "com.ashfaq.motometerpro"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

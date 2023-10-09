@@ -17,10 +17,10 @@
         android:theme="@style/Theme.SpeedometerApp"
         tools:targetApi="31">
         <activity
-            android:name=".Speed"
+            android:name="com.ashfaq.motometerpro.Speed"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.ashfaq.motometerpro.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
