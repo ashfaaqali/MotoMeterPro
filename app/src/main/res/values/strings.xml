@@ -4,4 +4,5 @@
     <string name="_0">0</string>
     <string name="alert">This app requires precise location access for accurate speed calculations.\n\nPlease grant precise location permission.</string>
     <string name="open_location_settings"><u>Open Location Settings</u></string>
+    <string name="please_turn_on_location">Please turn on Location</string>
 </resources>
