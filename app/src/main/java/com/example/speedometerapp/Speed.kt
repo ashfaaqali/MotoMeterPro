@@ -7,6 +7,7 @@ import android.location.LocationListener
 import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PowerManager
 import android.provider.Settings
 import android.util.Log
 import android.view.View
@@ -23,6 +24,8 @@ class Speed : AppCompatActivity() {
     private lateinit var fineLocation: String
     private var granted = 0
 
+    private var wakeLock: PowerManager.WakeLock? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySpeedBinding.inflate(layoutInflater)
@@ -30,6 +33,8 @@ class Speed : AppCompatActivity() {
 
         fineLocation = Manifest.permission.ACCESS_FINE_LOCATION
         granted = PackageManager.PERMISSION_GRANTED
+
+        acquireWakeLock()
 
         // Initialize location manager and listener
         locationManager = getSystemService(LOCATION_SERVICE) as LocationManager
@@ -43,6 +48,22 @@ class Speed : AppCompatActivity() {
             turnOnGPS()
         }
         requestLocationUpdates()
+    }
+
+    private fun acquireWakeLock() {
+        // Acquire a wake lock when the activity is created
+        val powerManager = getSystemService(POWER_SERVICE) as PowerManager
+        wakeLock = powerManager.newWakeLock(
+            PowerManager.SCREEN_BRIGHT_WAKE_LOCK or PowerManager.ACQUIRE_CAUSES_WAKEUP,
+            "MyApp:KeepScreenOnTag"
+        )
+        wakeLock?.acquire()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        // Release the wake lock when the activity is destroyed
+        wakeLock?.release()
     }
 
     private fun turnOnGPS(){
