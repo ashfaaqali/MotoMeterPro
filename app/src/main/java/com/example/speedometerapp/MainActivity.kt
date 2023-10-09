@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         // Initialize location manager and listener
         locationManager = getSystemService(LOCATION_SERVICE) as LocationManager
+
         locationListener = LocationListener { location -> // Calculate speed in meters per second
             if (location.hasSpeed()) {
                 val speed = location.speed * 3.6 // Convert to km/h
@@ -33,30 +34,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        locationManager.requestLocationUpdates(
-            LocationManager.GPS_PROVIDER,
-            10, // Update every 1 second
-            0f,   // Update whenever there's a location change
-            locationListener
-        )
-
-        checkPermission()
-    }
-
-    private fun checkPermission() {
-        // Request location updates
         if (ContextCompat.checkSelfPermission(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
-            ) == PackageManager.PERMISSION_GRANTED
+            ) != PackageManager.PERMISSION_GRANTED
         ) {
-            locationManager.requestLocationUpdates(
-                LocationManager.GPS_PROVIDER,
-                1000,
-                1f,
-                locationListener
-            )
-        } else {
             // Request location permission
             ActivityCompat.requestPermissions(
                 this,
@@ -64,5 +46,11 @@ class MainActivity : AppCompatActivity() {
                 1
             )
         }
+        locationManager.requestLocationUpdates(
+            LocationManager.GPS_PROVIDER,
+            1000,
+            1f,
+            locationListener
+        )
     }
 }
