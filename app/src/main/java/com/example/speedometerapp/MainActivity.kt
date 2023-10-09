@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
+    
     private fun isLocationPermissionGranted(): Boolean {
         return (ActivityCompat.checkSelfPermission(
             this,
@@ -73,6 +73,7 @@ class MainActivity : AppCompatActivity() {
             this,
             arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
             0
+
         )
     }
 }
