@@ -7,14 +7,14 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".Speed"
-    android:background="#497fbb">
+    android:background="@drawable/speed_screen_gradient">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/speedTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="#101c2b"
+        android:text="@string/_0"
+        android:textColor="@color/white"
         android:textSize="70sp"
         android:textStyle="bold" />
 
@@ -23,7 +23,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/km_h"
-        android:textColor="#101c2b"
+        android:textColor="@color/white"
         android:textSize="30sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/please_turn_on_location"
+        android:textSize="18sp"
+        android:drawableStart="@drawable/baseline_error_24"
+        android:drawablePadding="8dp"
+        android:padding="15dp"
+        android:background="@drawable/corners"
+        android:backgroundTint="#795831"
+        android:drawableTint="#ffddb9"
+        android:visibility="gone"/>
 
 </LinearLayout>
