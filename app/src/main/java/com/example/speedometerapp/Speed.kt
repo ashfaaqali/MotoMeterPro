@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.example.speedometerapp.databinding.ActivitySpeedBinding
 
@@ -33,9 +34,23 @@ class Speed : AppCompatActivity() {
         // Initialize location manager and listener
         locationManager = getSystemService(LOCATION_SERVICE) as LocationManager
 
+        val isGpsProviderEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
+        if (!isGpsProviderEnabled) {
+            binding.speedTextView.visibility = View.GONE
+            binding.kmhTv.visibility = View.GONE
+            binding.gps.visibility = View.VISIBLE
+
+            turnOnGPS()
+        }
         requestLocationUpdates()
     }
 
+    private fun turnOnGPS(){
+        Toast.makeText(applicationContext, "Please turn on Location", Toast.LENGTH_LONG).show()
+        val intent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
+        startActivity(intent)
+        finish()
+    }
     private fun requestLocationUpdates() {
         locationListener = LocationListener { location ->
             // Calculate speed in meters per second
