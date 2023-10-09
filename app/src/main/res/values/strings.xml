@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SpeedometerApp</string>
+    <string name="app_name">MotoMeter Pro</string>
     <string name="km_h">km/h</string>
     <string name="_0">0</string>
     <string name="alert">This app requires precise location access for accurate speed calculations.\n\nPlease grant precise location permission.</string>
