@@ -13,7 +13,7 @@
 
 ## Screenshots
 
-<img src="screenshots/Screenshot_20231009_232909.png" width="250" style="margin-right: 20px;"> <img src="screenshots/Screenshot_20231009_232842.png" width="250">
+<img src="screenshots/Screenshot_20231009_232909.png" width="250"> &nbsp;&nbsp; <img src="screenshots/Screenshot_20231009_232842.png" width="250">
 
 
 ## Motivation
