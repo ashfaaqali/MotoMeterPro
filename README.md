@@ -13,9 +13,8 @@
 
 ## Screenshots
 
-![Screenshot 1](screenshots/Screenshot_20231009_232909.png)
-
-![Screenshot 2](/screenshots/screenshot2.png)
+<img src = "screenshots/Screenshot_20231009_232909.png" width = "300">
+<img src = "screenshots/Screenshot_20231009_232909.png" width = "300">
 
 ## Motivation
 
