@@ -13,7 +13,7 @@
 
 ## Screenshots
 
-![Screenshot 1]([/screenshots/screenshot1.png](https://github.com/ashfaaqali/MotoMeterPro/blob/master/app/screenshots/Screenshot_20231009_232909.png))
+![Screenshot 1](screenshots/Screenshot_20231009_232909.png)
 
 ![Screenshot 2](/screenshots/screenshot2.png)
 
