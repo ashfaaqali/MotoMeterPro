@@ -13,8 +13,7 @@
 
 ## Screenshots
 
-<img src = "screenshots/Screenshot_20231009_232909.png" width = "300">
-<img src = "screenshots/Screenshot_20231009_232842.png" width = "300">
+<img src = "screenshots/Screenshot_20231009_232909.png" width = "250"> <img src = "screenshots/Screenshot_20231009_232842.png" width = "250">
 
 ## Motivation
 
