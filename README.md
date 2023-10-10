@@ -11,6 +11,12 @@
 - **Real-Time Speed Tracking:** Monitor your riding speed with precision.
 - **User-Friendly Interface:** Intuitive design for easy speed monitoring.
 
+## Screenshots
+
+![Screenshot 1](/screenshots/screenshot1.png)
+
+![Screenshot 2](/screenshots/screenshot2.png)
+
 ## Motivation
 
 As an Android developer with a passion for innovation, I conceived the idea for MotoMeter PRO. Faced with a damaged bike meter and the costly replacement of around 3k, I harnessed my creativity to develop this app as a cost-effective alternative. MotoMeter PRO transforms smartphones into reliable digital speed meters, providing riders with real-time speed tracking. My future plans include enhancing the app with trip KM tracking and a fuel indicator, further demonstrating my commitment to crafting practical solutions for everyday challenges.
