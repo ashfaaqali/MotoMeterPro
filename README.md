@@ -29,7 +29,7 @@ I have exciting plans to enhance MotoMeter PRO further:
 
 ## How to Use
 
-1. [Download the APK](#link-to-apk).
+1. [Download the app from Google Play Store](https://play.google.com/store/apps/details?id=com.ashfaq.motometerpro).
 2. Launch MotoMeter PRO and start tracking your speed!
 
 ## Contributing
